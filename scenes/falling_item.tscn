@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c66teia61tg8v"]
+
+[ext_resource type="Script" uid="uid://h7rf8vquy0um" path="res://scripts/falling_item/falling_item.gd" id="1_ihc3o"]
+[ext_resource type="Texture2D" uid="uid://c5q1uxl0r8jgp" path="res://assets/red.png" id="2_yuf2i"]
+[ext_resource type="Texture2D" uid="uid://c44fyyrqf3q1b" path="res://assets/green.png" id="3_vq1pw"]
+[ext_resource type="Texture2D" uid="uid://lrd5g20uq5e8" path="res://assets/blue.png" id="4_5jops"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjv27"]
+size = Vector2(40, 40)
+
+[node name="FallingItem" type="Area2D" unique_id=1112807066]
+script = ExtResource("1_ihc3o")
+red_texture = ExtResource("2_yuf2i")
+green_texture = ExtResource("3_vq1pw")
+blue_texture = ExtResource("4_5jops")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=277865483]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_qjv27")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1947844463]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.25882354, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622199741]
+position = Vector2(20, 20.000002)
+scale = Vector2(0.0390625, 0.039062504)
+texture = ExtResource("2_yuf2i")
